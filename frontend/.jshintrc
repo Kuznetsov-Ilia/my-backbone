@@ -1,0 +1,67 @@
+{
+  // Settings
+  "passfail": 0, // Stop on first error.
+  "maxerr": 100, // Maximum errors before stopping.
+
+  // Predefined globals whom JSHint will ignore.
+  "browser": 1, // Standard browser globals e.g. `window`, `document`.
+
+  "node": 1,
+  "rhino": 0,
+  "couch": 0,
+  "wsh": 0, // Windows Scripting Host.
+
+  "jquery": 1,
+  "prototypejs": 0,
+  "mootools": 0,
+  "dojo": 0,
+
+  "predef": [ // Extra globals.
+    "require",
+    "define",
+    "module"
+  ],
+
+  // Development.
+  "debug": 1, // Allow debugger statements e.g. browser breakpoints.
+  "devel": 1, // Allow development statements e.g. `console.log();`.
+
+  // EcmaScript 5.
+  "es5": 0, // Allow EcmaScript 5 syntax.
+  "strict": 0, // Require `use strict` pragma in every file.
+  "globalstrict": 0, // Allow global "use strict" (also enables 'strict').
+  "-W058": 1, // Missing '()' invoking a constructor http://jslinterrors.com/missing-invoking-a-constructor/
+
+  // The Good Parts.
+  "asi": 1, // Tolerate Automatic Semicolon Insertion (no semicolons).
+  "laxbreak": 0, // Tolerate unsafe line breaks e.g. `return [\n] x` without semicolons.
+  "bitwise": 0, // Prohibit bitwise operators (&, |, ^, etc.).
+  "boss": 0, // Tolerate assignments inside if, for & while. Usually conditions & loops are for comparison, not assignments.
+  "curly": 1, // Require {} for every new block or scope.
+  "eqeqeq": 0, // Require triple equals i.e. `===`.
+  "eqnull": 0, // Tolerate use of `== null`.
+  "evil": 0, // Tolerate use of `eval`.
+  "expr": 0, // Tolerate `ExpressionStatement` as Programs.
+  "forin": 0, // Tolerate `for in` loops without `hasOwnPrototype`.
+  "immed": 1, // Require immediate invocations to be wrapped in parens e.g. `( function(){}() );`
+  "latedef": 0, // Prohibit variable use before definition.
+  "loopfunc": 0, // Allow functions to be defined within loops.
+  "noarg": 0, // Prohibit use of `arguments.caller` and `arguments.callee`.
+  "regexp": 1, // Prohibit `.` and `[^...]` in regular expressions.
+  "regexdash": 0, // Tolerate unescaped last dash i.e. `[-...]`.
+  "scripturl": 1, // Tolerate script-targeted URLs.
+  "shadow": 0, // Allows re-define variables later in code e.g. `var x=1; x=2;`.
+  "supernew": 0, // Tolerate `new function () { ... };` and `new Object;`.
+  "undef": 1, // Require all non-global variables be declared before they are used.
+
+  // Persone styling prefrences.
+  "newcap": 1, // Require capitalization of all constructor functions e.g. `new F()`.
+  "noempty": 1, // Prohibit use of empty blocks.
+  "nonew": 0, // Prohibit use of constructors for side-effects.
+  "nomen": 0, // Prohibit use of initial or trailing underbars in names.
+  "onevar": 0, // Allow only one `var` statement per function.
+  "plusplus": 0, // Prohibit use of `++` & `--`.
+  "sub": 1, // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
+  "trailing": 0, // Prohibit trailing whitespaces.
+  "white": 0 // Check against strict whitespace and indentation rules.
+}

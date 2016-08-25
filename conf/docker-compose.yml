@@ -1,0 +1,85 @@
+app:
+  image: ikuznetsov/openresty
+  volumes:
+    - ../backend:/var/www/backend
+    - ../public:/var/www/public
+    - ../logs:/opt/openresty/nginx/logs
+    - ./nginx:/opt/openresty/nginx/conf
+    - /etc/localtime:/etc/localtime:ro
+  ports:
+    - "80:80"
+hub:
+  image: selenium/hub
+  restart: always
+  ports:
+    - "4444:4444"
+firefox:
+  image: selenium/node-firefox
+  restart: always
+  links:
+    - hub
+chrome:
+  image: selenium/node-chrome
+  restart: always
+  links:
+    - hub
+chromedebug:
+  image: selenium/node-chrome-debug
+  links:
+    - hub
+  ports:
+    - "5900:5900"
+firefoxdebug:
+  image: selenium/node-firefox-debug
+  links:
+    - hub
+  ports:
+    - "5901:5900"
+webdrivercss-adminpanel:
+  image: aeharding/webdrivercss-adminpanel
+  links:
+    - hub
+  ports:
+    - "9000:9000"
+
+# volumes:
+#   - ../screenshots:/code/repositories
+# links:
+#     - tarantool:
+# tarantool:
+#     image: tarantool/tarantool
+#     volumes:
+#         - tarantool.cfg:/etc/tarantool/tarantool.cfg
+#     ports:
+#         - "3301:3301"
+
+# log:
+#     image: balabit/syslog-ng
+#     volumes:
+#     - ../logs:/var/log
+#     ports:
+#     - "514:514"
+#     - "601:601"
+
+# hopbox-mysql:
+#     image: mysql
+#     ports:
+#         - "3306:3306"
+#     volumes:
+#         - ./mysql:/etc/mysql/conf.d
+#         - /etc/localtime:/etc/localtime:ro
+#     environment:
+#      - MYSQL_ROOT_PASSWORD=3_CvV4oV
+# hopbox-memcached:
+#     image: memcached
+#     volumes:
+#         - /etc/localtime:/etc/localtime:ro
+# mail:
+#   image: tvial/docker-mailserver
+#   hostname: mail
+#   domainname: my-domain.com
+#   ports:
+#   - "25:25"
+#   - "143:143"
+#   - "587:587"
+#   - "993:993"

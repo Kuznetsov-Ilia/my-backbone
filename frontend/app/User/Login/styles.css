@@ -1,0 +1,14 @@
+@import 'app/styles/vars';
+.form {
+  width: 23em;
+}
+.right {
+  text-align: right
+}
+.rememberLabel {
+  margin: 0 1em;
+}
+.errors {
+  color: var(--red);
+  margin: 1em 0;
+}

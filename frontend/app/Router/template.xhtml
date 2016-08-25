@@ -1,0 +1,42 @@
+<import name="UserAuthBar" from="app/User/AuthBar/template" />
+<import name="{logo, bottomMenu}" from="./styles" />
+<import name="{IndexPage}" from="app/Index/template" />
+<import name="UserVerify" from="app/User/Verify/template" />
+<import name="UserLogin" from="app/User/Login/template" />
+<import name="UserRestore" from="app/User/Restore/template" />
+<import name="UserForgot" from="app/User/Forgot/template" />
+<import name="OrderForm" from="app/Order/Form/template" />
+<import name="OrderEdit" from="app/Order/Form/template" />
+<import name="OrderMake" from="app/Order/Form/template" />
+<import name="OrderCancel" from="app/Order/Cancel/template" />
+<import name="Feedback" from="app/Feedback/template" />
+<import name="AboutPage" from="app/About/template" />
+<import name="NotFound" from="app/NotFound/template" />
+
+<Site export="default">
+  <UserAuthBar />
+  <div class="wrapper_height">
+    <a href="/" class="$logo"></a>
+    <IndexPage />
+    <UserVerify />
+    <UserLogin />
+    <UserRestore />
+    <UserForgot />
+    <OrderForm />
+    <OrderEdit />
+    <OrderMake />
+    <OrderCancel />
+    <Feedback />
+    <AboutPage />
+    <NotFound />
+  </div>
+  <Footer />
+</Site>
+
+<Footer>
+  <div class="$bottomMenu">
+    <a href="/About">О сервисе</a>
+    <a href="/Feedback">Оставить отзыв</a>
+    <a target="_blank" href="https://www.instagram.com/hop.box/">Instagram</a>
+  </div>
+</Footer>

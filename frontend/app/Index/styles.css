@@ -1,0 +1,41 @@
+@import 'app/styles/vars';
+@media (max-width: 470px) {
+  :global {
+    html {
+      min-height: 100%;
+    }
+    h1, .h1 {
+      font-size: 30px !important;
+    }    
+  }
+  .box {
+    position: relative !important;
+    background-size: 302px 150px!important;
+    margin-bottom: -6em;
+  }
+}
+
+
+.box {
+  width: 385px;
+  height: 192px;
+  background: url('/images/p-subscribe-bg@2x.png') no-repeat bottom center;
+  background-size: 385px 192px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -192px;
+}
+.fail {
+  color: var(--red);
+  margin: 1em 0;
+}
+.success {
+  color: #999;
+  margin: 1em 0;
+}
+.bottom {
+  padding: 0 1.5em;
+  max-width: 30em;
+  margin: 0 auto;
+}

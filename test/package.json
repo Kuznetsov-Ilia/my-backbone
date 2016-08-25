@@ -1,0 +1,31 @@
+{
+  "name": "test.otvet.mail.ru",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rm -rf reports",
+    "test:1": "npm run docker:debug && npm test",
+    "test": "wdio",
+    "_posttest": "docker-compose stop && docker-compose rm -vf",
+    "docker": "docker-compose up -d firefox chrome webdrivercss-adminpanel",
+    "docker:debug": "docker-compose up -d webdrivercss-adminpanel firefoxdebug chromedebug",
+    "postdocker:debug": "npm run vnc:firefox && npm run vnc:chrome",
+    "restart": "docker-machine stop default && docker-machine start default",
+    "_postrestart": "npm run docker",
+    "vnc:firefox": "open vnc://192.168.99.100:5901",
+    "vnc:chrome": "open vnc://192.168.99.100:5900",
+    "report": "allure report generate -o allure-report allure-results && allure report open -o allure-report"
+  },
+  "author": "i.kuznecov@corp.mail.ru",
+  "license": "WTFPL",
+  "dependencies": {
+    "allure-commandline": "^1.4.22-1",
+    "mocha": "^2.4.5",
+    "wdio-allure-reporter": "0.0.2",
+    "wdio-cucumber-framework": "0.0.6",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdrivercss": "^1.1.10",
+    "webdriverio": "^4.0.5"
+  }
+}

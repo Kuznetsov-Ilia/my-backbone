@@ -1,0 +1,63 @@
+<import name="{h1, description, label18, submit, form, error}" from="./styles" />
+<import name="{w70, w30}" from="app/styles/form" />
+<UserVerify export="default">
+  <VeryfyOk />
+  <VeryfyFail />
+</UserVerify>
+
+<VeryfyOk>
+  <h1 class="$h1">Рады тебя видеть</h1>
+  <p class="$description">Для начала использования нашего сервиса нужно зарегистрироваться.</p>
+  <form novalidate="1" name="VeryfyUser" class="$form">
+    <div>
+      <label>Эл.почта</label>
+      <div class="$w70">
+        <input type="text" name="email" maxlength="255" readonly="1" value="{email}" tabindex="-1" />
+      </div>
+    </div>
+    <div>
+      <label for="verify-name">Имя</label>
+      <div class="$w70">
+        <input id="verify-name" type="text" name="name" required="1" maxlength="50" tabindex="1" />
+      </div>
+    </div>
+    <div>
+      <label for="verify-password">Пароль</label>
+      <div class="$w70">
+        <input id="verify-password" type="password" name="password" tabindex="2" required="1" />
+      </div>
+    </div>
+    <div>
+      <label for="verify-confirm"><span>Пароль ещё раз</span></label>
+      <div class="$w70">
+        <input id="verify-confirm" type="password" name="confirm" tabindex="3" required="1" />
+      </div>
+    </div>
+    <div>
+      <div class="$w30"></div>
+      <div class="$w70">
+        <input id="verify-18" type="checkbox" name="adult" tabindex="4" required="1" />
+        <label for="verify-18" class="$label18">Мне есть 18</label>
+      </div>
+    </div>
+    <div>
+      <div class="$w30"></div>
+      <div class="$w70">
+        <button type="submit" tabindex="5">Готово</button>
+        <br />
+        <ErrorMessage />
+      </div>
+    </div>
+  </form>
+</VeryfyOk>
+
+<VeryfyFail>
+  <form>
+    <h1>По этой ссылке уже зарегистрировались</h1>
+    {reason|html}
+  </form>
+</VeryfyFail>
+
+<ErrorMessage>
+  <div class="$error">{text}</div>
+</ErrorMessage>

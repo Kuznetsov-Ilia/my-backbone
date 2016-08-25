@@ -1,0 +1,51 @@
+@import 'app/styles/vars';
+@media (max-width: 470px) {
+  .label18 {
+    display: inline!important;
+  }
+  .form {
+    text-align: center;
+  }
+}
+
+:global(.flags) {
+  background-image: url('/images/flags.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(   min--moz-device-pixel-ratio: 2),
+(     -o-min-device-pixel-ratio: 2/1),
+(        min-device-pixel-ratio: 2),
+(                min-resolution: 192dpi),
+(                min-resolution: 2dppx) {
+  :global(.flags) {
+    background-image: url('/images/flags@2x.png');
+    background-size: 870px 247px;
+  }
+}
+
+.h1 {
+  font-size: 2em;
+}
+.description {
+  width: 21em;
+  margin: 0 auto;
+}
+.form {
+}
+.label18 {
+  width: 8em;
+  padding-left: 1em;
+}
+.submit {
+  text-align: right;
+}
+.error {
+  color: var(--red);
+  margin-top: 1em;
+  text-align: left;
+}
+

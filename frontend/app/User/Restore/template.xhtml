@@ -1,0 +1,27 @@
+<import name="{w70, w30}" from="app/styles/form" />
+<import name="{errors, success}" from="./styles" />
+<UserLogin export="default">
+  <form as="form">
+    <div>
+      <label>Новый пароль</label>
+      <div class="$w70">
+        <input name="password" type="password" required="1" />
+      </div>
+    </div>
+    <div>
+      <div class="$w30"></div>
+      <div class="$w70">
+        <button type="submit">Изменить</button>
+      </div>
+    </div>
+    <Errors />
+    <Logs />
+  </form>
+</UserLogin>
+
+<Errors>
+  <div class="animated fadeIn $errors">{text|html}</div>
+</Errors>
+<Logs>
+  <div class="animated fadeIn $success">{text|html}</div>
+</Logs>

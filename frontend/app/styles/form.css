@@ -1,0 +1,151 @@
+@import './vars';
+form {
+  width: 30em;
+  margin: 30px auto;
+  & > div {
+    margin: 1em 0;
+  }
+  :global(.box) & {
+    width: 33em;
+  }
+}
+label {
+  display: inline-block;
+  width: 30%;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  color: #606060;
+  text-align: left;
+}
+label > span {
+  line-height: 1.4;
+  display: inline-block;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  font-family: Roboto, sans-serif, arial, helvetica;
+
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  tap-highlight-color: rgba(255, 255, 255, 0);
+  &:disabled {
+    opacity: 0.4;
+    color: #000;
+  }
+}
+input, textarea {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color: var(--gray-line);
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: var(--gray-line);
+    opacity:  1;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: var(--gray-line);
+    opacity:  1;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: var(--gray-line);
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+textarea {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  margin: 0;
+  padding: 0 0.7em;
+  vertical-align: top;
+  background: #edeff2;
+  border: none;
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  width: 18em;
+}
+input[readonly] {
+  background: 0;
+  font-weight: bold;
+}
+@media (max-width: 470px) {
+  textarea,
+  input[type=text],
+  input[type=password],
+  input[type=number],
+  input[type=email] {
+    width: 100%!important;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+textarea {
+  height: 5em;
+  padding: 0.5em;
+  resize: none;
+}
+
+@media (max-width: 1100px) {
+  .hidable {
+    display: none;
+  }
+}
+@media (min-width:1101px) and (max-width: 1180px) {
+  .hidable {
+    display: inline;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1400px) {
+  .hidable {
+    display: none;
+  }
+}
+@media (max-width: 470px) {
+  .w70 {
+    width: 100%!important;
+  }
+  .w30 {
+    display: none!important;
+  }
+}
+
+
+.w30 {
+  width: 30%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.w70 {
+  width: 70%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  text-align: left;
+}
+

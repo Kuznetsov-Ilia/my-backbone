@@ -1,0 +1,7 @@
+{
+  "user": "/rest/user",
+  "auth": "/rest/auth",
+  "order": "/rest/order",
+  "feedback": "/rest/feedback",
+  "settings": "/rest/settings"
+}

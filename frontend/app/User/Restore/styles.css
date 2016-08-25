@@ -1,0 +1,8 @@
+@import 'app/styles/vars';
+.errors {
+  color: var(--red);
+  margin: 1em 0;
+}
+.success {
+  color: var(--green);
+}

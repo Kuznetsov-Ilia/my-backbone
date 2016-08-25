@@ -1,0 +1,8 @@
+.main {
+  background-image: url('/images/sprite.png');
+  display: inline-block;
+}
+.services {
+  background-image: url('/images/services.png');
+  display: inline-block;
+}

@@ -1,0 +1,16 @@
+{
+  "User/Verify(/:hash)(/)": "UserVerify",
+  "User/Login(/:login)(/)": "UserLogin",
+  "User/Forgot(/:login)(/)": "UserForgot",
+  "User/Restore(/:hash)(/)": "UserRestore",
+  "Order/List(/:type)(/)": "OrderList",
+  "Order/Edit/:id(/)": "OrderEdit",
+  "Order/Cancel/:id(/)": "OrderCancel",
+  "Order/Form(/)": "OrderForm",
+  "Order/Make(/)": "OrderMake",
+  "About(/)": "AboutPage",
+  "Feedback(/)": "Feedback",
+  "404": "NotFound",
+  "(/)": "IndexPage",
+  "*splat": "NotFound"
+}

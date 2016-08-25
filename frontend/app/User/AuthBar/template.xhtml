@@ -1,0 +1,20 @@
+<import name="{root}" from="./styles" />
+<UserAuth export="default">
+  <div class="$root">
+    <Authed />
+    <NotAuthed />
+  </div>
+</UserAuth>
+
+<Authed>
+  <p>{email}</p>
+  <a action="logout" href="/User/Logout">Выйти</a>
+</Authed>
+
+<NotAuthed>
+  <a href="/User/Login">Войти</a>
+  <a style="margin-left: 1em" href="mailto:mainpage@hopbox.ru">Написать</a>
+</NotAuthed>
+
+
+

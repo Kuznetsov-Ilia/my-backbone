@@ -1,0 +1,36 @@
+:global {
+  .animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  .slideOutUp {
+    animation-name: slideOutUp;
+  }
+  .bounceOut {
+    animation-name: bounceOut;
+  }
+  .animated.bounceIn,
+  .animated.bounceOut {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes slideOutUp {
+    from { transform: translate3d(0, 0, 0);}
+    to { visibility: hidden; transform: translate3d(0, -100%, 0);}
+  }
+  @keyframes bounceOut {
+    20% { transform: scale3d(.9, .9, .9);}
+    50%, 55% { opacity: 1; transform: scale3d(1.1, 1.1, 1.1);}
+    to { opacity: 0; transform: scale3d(.3, .3, .3);}
+  }
+}
+

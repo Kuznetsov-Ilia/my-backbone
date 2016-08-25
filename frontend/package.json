@@ -1,0 +1,67 @@
+{
+  "name": "my-backbone",
+  "version": "1.0.0",
+  "description": "yet another javascript framework boilerplate",
+  "main": "index.js",
+  "config": {
+    "port": 3000,
+    "start": "--inline --hot --port 3000 --content-base ./public "
+  },
+  "scripts": {
+    "postinstall": "ln -s ../app node_modules/app",
+    "start": "NODE_ENV=development webpack-dev-server $npm_package_config_start"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-normal-please"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "*",
+    "babel-preset-normal-please": "0.0.2",
+    "chalk": "^1.1.3",
+    "cssnano": "^3.5.2",
+    "my-backbone-router": "^1.0.0",
+    "my-cookie": "^1.0.0",
+    "my-event": "^1.0.0",
+    "my-fetch": "^1.0.1",
+    "my-form": "^1.0.0",
+    "my-global": "^1.0.0",
+    "my-preloader": "^1.0.0",
+    "my-util": "^1.0.0",
+    "my-vanga": "^1.0.3",
+    "my-view": "^1.0.0",
+    "npm-watch": "^0.1.4",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-define-property": "^0.3.1",
+    "postcss-import": "^8.1.0",
+    "postcss-loader": "^0.8.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "*",
+    "css-loader": "*",
+    "html-webpack-plugin": "^2.1.0",
+    "json-loader": "*",
+    "mocha": "*",
+    "mocha-loader": "*",
+    "style-loader": "*",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "*",
+    "webpack-sources": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QiV/my-backbone.git"
+  },
+  "keywords": ["backbone", "webpack", "rollup", "devserver", "mocha", "testserver", "docker"],
+  "author": "Ilia Kuznetsov",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/QiV/my-backbone/issues"
+  },
+  "homepage": "https://github.com/QiV/my-backbone#readme"
+}

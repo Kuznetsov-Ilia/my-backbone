@@ -1,0 +1,27 @@
+:root {
+  --page-max: 91.25em;      /* 1460px */
+  --column-width: 17.5em;   /* 280px */
+  --page-padding: 0 1.25em; /* 0 20px */
+  --min-width: 37.5em;      /* 600px */
+  --max-width: 58.75em;     /* 900px */
+  --ava-padding: 5.6em;
+
+  --h1: 36px;
+  --h2: 20px;
+  --h3: 17px;
+  --h4: 15px;
+  --h5: 13px;
+  --h6: 11px;
+
+  --black: #333;
+  --blue: #0077cc;
+  --gray: #808080; /*основной*/
+  --gray-tag: #c7c7c7; /*svg + tag*/
+  --gray-line: #999; /*line, dark separator*/
+  --gray-bg: #f0f0f0; /*bg + light separator*/
+  --white: #fff;
+  --orange: #fa0;
+  --green: #61a427;
+  --red: #ce1900;
+
+}

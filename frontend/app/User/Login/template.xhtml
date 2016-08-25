@@ -1,0 +1,27 @@
+<import name="{form, right, rememberLabel, errors}" from="./styles" />
+<import name="{w70, w30}" from="app/styles/form" />
+<UserLogin export="default">
+  <form as="form" class="$form" novalidate="1">
+    <div>
+      <label>Email</label>
+      <div class="$w70"><input name="login" type="email" required="1" /></div>
+    </div>
+    <div>
+      <label>Пароль</label>
+      <div class="$w70"><input name="password" type="password" required="1" /></div>
+    </div>
+    <div>
+      <div class="$w30"></div>
+      <div class="$w70">
+        <button type="submit">Войти</button>
+      </div>
+    </div>
+    <Errors />
+    <br />
+    <a href="/User/Forgot">Восстановления пароля</a>
+  </form>
+</UserLogin>
+
+<Errors>
+  <div class="animated fadeIn $errors">{text|html}</div>
+</Errors>
